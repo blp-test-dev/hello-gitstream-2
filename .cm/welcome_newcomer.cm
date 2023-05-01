@@ -7,7 +7,7 @@ automations:
   new_contributor_review:
     # If the PR author made their first contirbution on the current day
     if:
-      - {{ repo.author_age < 0 and repo.age >= 0 }}
+      - {{ repo.author_age = 0 and repo.age >= 0 }}
     # 1. Add reviewers from the team `my_organization/mentors`. Replace this string to match your organization
     # 2. Apply a new-contributor label.
     # 3 Post a comment that explains the next steps.
